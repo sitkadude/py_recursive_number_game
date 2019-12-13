@@ -8,10 +8,18 @@ if guess_number == random_number:
     print("You got it! The correct number was {}! Thanks for playing!".format(random_number))
 
 elif guess_number > random_number:
-    second_guess = input("The number is higher is lower than {}. Please guess again: ".format(guess_number))
+    second_guess = input("The number is lower than {}. Please guess again: ".format(guess_number))
+    if second_guess == random_number:
+        print("Well done! {} was the correct answer!".format(random_number))
+    else:
+        print("WRONG! The correct answer was {}. Thanks for playing!".format(random_number))
 
 elif guess_number < random_number:
-    second_guess = input("The number is smaller is lower than {}. Please guess again: ".format(guess_number))
+    second_guess = input("The number is higher than {}. Please guess again: ".format(guess_number))
+    if second_guess == random_number:
+        print("Well done! {} was the correct answer!".format(random_number))
+    else:
+        print("WRONG! The correct answer was {}. Thanks for playing!".format(random_number))
 else:
     print("WRONG! The correct answer was {}. Thanks for playing!".format(random_number))
 
