@@ -4,28 +4,28 @@ import random
 def guess_number(random_number, message, max_guesses, total_guesses = 1):
 
     if (total_guesses > max_guesses):
-        return print("Sorry, the correct number was " + str(random_number) + ".")
+        return print("Sorry, " + user_name + ". The correct number was " + str(random_number) + "!")
 
     guess = input(message)
 
     while True:
         try:
             if (int(guess) == random_number):
-                return print("Nice guess! " + guess + " was the correct answer!")
+                return print("Nice guess, " + user_name + "! " + guess + " was the correct answer!")
             else:
                 break
         except ValueError:
-            return print("Sorry, that was not an integer.")
+            return print("Sorry, " + user_name + ". That was not an integer.")
 
     if (int(guess) < random_number):
-        return guess_number(random_number, "Sorry, the number is higher than " + guess + ". Please guess again: ", max_guesses, total_guesses + 1)
+        return guess_number(random_number, "Sorry, " + user_name + ". The number is higher than " + guess + ". Please guess again: ", max_guesses, total_guesses + 1)
 
     if (int(guess) > random_number):
-        return guess_number(random_number, "Sorry, the number is lower than " + guess + ". Please guess again: ", max_guesses, total_guesses + 1)
+        return guess_number(random_number, "Sorry, " + user_name + ". The number is lower than " + guess + ". Please guess again: ", max_guesses, total_guesses + 1)
 
 random_number = int(random.randint(1,6))
-user_name = input("What is your name?: ")
-message = guess_number(random_number, user_name.capitalize() + ", guess a number between 1 and 6!: ", 2)
+user_name = input("What is your name?: ").capitalize()
+message = guess_number(random_number, user_name + ", guess a number between 1 and 6!: ", 2)
 
 
 #--- First Attempt ---#
