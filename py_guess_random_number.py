@@ -1,4 +1,4 @@
-#--- Second Attempt ---#
+#--- Rewritten Recursively ---#
 import random
 
 def guess_number(random_number, message, max_guesses, total_guesses = 1):
@@ -28,7 +28,7 @@ user_name = input("What is your name?: ").capitalize()
 message = guess_number(random_number, user_name + ", guess a number between 1 and 6!: ", 2)
 
 
-#--- First Attempt ---#
+#--- Non-Recursively ---#
 
 #import random
 #random_number = random.randint(1,6)
