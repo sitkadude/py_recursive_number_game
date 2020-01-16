@@ -6,16 +6,18 @@ def guess_number(random_number, message, max_guesses, total_guesses = 1):
     if (total_guesses > max_guesses):
         return print("Sorry, " + user_name + ". The correct number was " + str(random_number) + "!")
 
-    guess = input(message)
+    
 
     while True:
+        guess = input(message)
         try:
             if (int(guess) == random_number):
                 return print("Nice guess, " + user_name + "! " + guess + " was the correct answer!")
             else:
                 break
         except ValueError:
-            return print("Sorry, " + user_name + ". That was not an integer.")
+            print("Sorry, " + user_name + ". That was not an integer, please try again!")
+            continue
 
     if (int(guess) < random_number):
         return guess_number(random_number, "Sorry, " + user_name + ". The number is higher than " + guess + ". Please guess again: ", max_guesses, total_guesses + 1)
