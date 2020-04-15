@@ -1,2 +1,7 @@
-# py_guess_number_game
-A number guessing game I created with python.
+This is a guessing game that I created with a python recurssive function.
+
+Instructions:<br/>
+(1) Download Repo;<br/>
+(2) Run `py_guess_random_number.py`.
+
+
