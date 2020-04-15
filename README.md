@@ -1,6 +1,6 @@
-# RECURSIVE PYTHON # GUESSING GAME
+# NUMBER GUESSING GAME
 
-This is a guessing game that I created with a python recurssive function.
+This is a guessing game that I created with a python recursive function.
 
 INSTRUCTIONS:<br/>
 (1) Download repo<br/>
