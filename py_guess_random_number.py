@@ -21,7 +21,7 @@ def guess_number(random_number, message, max_guesses, total_guesses = 1):
         return guess_number(random_number, f"Sorry, {user_name}. The number is higher than {guess}. Please guess again: ", max_guesses, total_guesses + 1)
 
     if (int(guess) > random_number):
-        return guess_number(random_number, "Sorry, {user_name}. The number is lower than {guess}. Please guess again: ", max_guesses, total_guesses + 1)
+        return guess_number(random_number, f"Sorry, {user_name}. The number is lower than {guess}. Please guess again: ", max_guesses, total_guesses + 1)
 
 random_number = int(random.randint(1,6))
 user_name = input("What is your name?: ").title()
